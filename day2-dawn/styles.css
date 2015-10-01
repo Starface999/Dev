@@ -1,0 +1,18 @@
+
+html,body{
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	background-image: url("http://i.imgur.com/PmFED2C.jpg");
+    background-size:cover;
+}
+
+.page-container-full {
+    size:cover;
+}
+.below-image {
+	 width: 10%;
+  margin: auto;
+}

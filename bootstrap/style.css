@@ -1,0 +1,15 @@
+
+/* add Bootstrap overrides and custom styles here */
+
+
+h3 {
+    text-align: right;
+}
+
+h4 {
+	font-size: 19px;
+}
+
+h5 {
+	font-size: 12px;
+}
