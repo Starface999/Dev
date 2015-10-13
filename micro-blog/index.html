@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Blank</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- VENDOR SCRIPTS -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- APPLICATION SCRIPTS -->
+    <script src="base.js"></script>
+  </head>
+  <body onload="initialize()">
+    <nav class="navbar navbar-default navbar-fixed-top">
+     <a id="logo" href="index.php" title="Urban Hacking since the Situationists"><img src="http://i.imgur.com/9hLajUe.png"></a>
+    </nav>
+
+
+    <div class="row">
+      <div class="col-sm-9 sidebar-outer">
+          <div class="sidebar">
+            <br>
+            <br>
+            <div id="map_canvas" style="width: 1025px; height: 600px;"></div>
+          </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="content">
+          <div class="col-md-12" id="eventsContainer">
+            <br>
+            <br>
+            <br>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Post an event</button>
+            <div id="myModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+                <form role="form" id="postEventForm">
+                  <div class="form-group">
+                    <h4>Post an Event</h4>
+                    <div>
+                      <label for="nameOfEvent">Name of Event</label>
+                    </div>
+                    <div>
+                      <input type="text" class="form-control" id="nameOfEvent">
+                    </div>
+                    <label for="date">Date (mm/dd/yyyy format)</label>
+                    <div>
+                      <input type="text" class="form-control" id="date">
+                    </div>
+                    <label for="time">Time (indicate am or pm)</label>
+                    <div>
+                      <input type="text" class="form-control" id="time">
+                    </div>
+                    <label for="frmAddressS">Address</label>
+                    <div>
+                      <input type="text" name="ship-address" id="addressStreet" placeholder="street e.g. 220 Mission st. " autocomplete
+                      "shipping street-address">
+                    </div>
+                    <div>
+                      <input type="text" name="city" id="addressCity" placeholder="city" autocomplete
+                      "address-level2">
+                    </div>
+                    <div>
+                      <input type="text" name="state" id="addressState" placeholder="state" autocomplete
+                      "address-level1">
+                    </div>
+                    <div>
+                      <input type="text" name="zip" id="addressZip" placeholder="zip code" autocomplete
+                      "postal-code">
+                    </div>
+                    <div>
+                      <label for="coordinates">OR coordinates</label>
+                    </div>
+                    <div>
+                      <input type="text" name="latitude" id="latitude" placeholder="latitude">
+                    </div>
+                    <div>
+                      <input type="text" name="longitude" id="longitude" placeholder="longitude">
+                    </div>
+                  </div>
+                  <div>Description</label>
+                  </div>
+                  <div>
+                    <textarea class="form-control" name="Text1" cols="40" rows="4" id="description" ></textarea>
+                  </div>
+                  <div>Image</label>
+                  </div>
+                  <div>
+                    <input type="text" name="longitude" id="image" placeholder="imgur or other direct image link">
+                  </div>
+                  <button type="submit" class="btn btn-default pull-right">Post Event</button>
+                </form>
+              </div>
+            </div>
+            <div>
+              <h3>Upcoming Events</h3>
+            </div>
+            <br>
+            <div id="eventPosts">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
