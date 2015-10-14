@@ -1,0 +1,8 @@
+// My pseudo-code routes:
+
+GET ALL ICE CREAM: “/ice-creams”
+GET ICE CREAM BY FLAVOR: “/ice-creams/flavors/:id”
+GET ALL FLAVORS: “/ice-creams/flavors”
+GET ICE CREAM BY CATEGORY: “/ice-creams/category/:id”
+GET ALL CATEGORIES: “/ice-creams/category”
+POST NEW FLAVOR: “/ice-creams/flavors/:id”
