@@ -8,6 +8,10 @@ body {
   	background-color: rgba(255,0,200,1); /* Sanity Check! */
 }
 
+.navbar {
+  height: 60px;
+}
+
 .eventImage {
 	max-height: 100%;
 	max-width: 100%;
