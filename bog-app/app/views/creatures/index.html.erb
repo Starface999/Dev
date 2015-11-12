@@ -1,0 +1,22 @@
+<h1>Creatures in the swamp:</h1>
+ 
+<table>
+  <tr>
+    <th>Creature Name:</th>
+    <th>Creature Description</th>
+    <th>Creature Image</th>
+    <th>edit or delete</th>
+  </tr>
+ 
+  <% @creatures.each do |creature| %>
+    <tr>
+      <td><%= creature.title %></td>
+      <td><%= creature.description %></td>
+      <td><img src="<%= creature.image_url %>"></td>
+      <td><%= link_to 'Edit', edit_creature_path(creature) %></td>
+      <td><%= link_to 'Destroy', creature_path(creature),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

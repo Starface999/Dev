@@ -1,0 +1,24 @@
+<h1>Welcome to this amazing fucking app.</h1>
+<%= link_to "Add User", "", "data-toggle" => "modal", 'data-target' => '#myModal' %>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Add User</h4>
+        </div>
+        <div class="modal-body">
+          <%= form_for :user, url: '/users' do |f| %>
+            <%= f.email_field :email, placeholder: "Email", autofocus: true %>
+            <%= f.password_field :password, placeholder: "Password" %>
+            <%= f.submit "fsociety" %>
+          <% end %>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="myModal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

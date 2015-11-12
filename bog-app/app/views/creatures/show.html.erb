@@ -1,0 +1,13 @@
+<p>
+  <strong><%= @creature.title %></strong>
+</p>
+ 
+<p>
+  <%= @creature.description %>
+</p>
+
+<p>
+  <img src="<%= @creature.image_url %>">
+</p>
+<%= link_to 'Edit', edit_creature_path(@creature) %> |
+<%= link_to 'Back', creatures_path %>
